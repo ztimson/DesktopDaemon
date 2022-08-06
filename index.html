@@ -3,16 +3,21 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>TS Electron Template</title>
+    <title>Desktop Daemon</title>
+    <link rel="icon" type="img/png" src="assets/logo.png">
+
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+    </style>
   </head>
   <body>
-    <!-- Placeholder -->
-    <h1>Versions:</h1>
-    <p>Node.js - <span id="node-version"></span></p>
-    <p>Chromium - <span id="chrome-version"></span></p>
-    <p>Electron - <span id="electron-version"></span></p>
-
-    <!-- Put your code inside src/renderer.ts -->
+    <canvas id="canvas"></canvas>
     <script src="./dist/renderer.js"></script>
   </body>
 </html>

@@ -1,14 +1,29 @@
-import {app, BrowserWindow} from "electron";
+import {app, BrowserWindow, screen} from "electron";
 import * as path from "path";
 
 // Window factory
 function createWindow() {
+  const primaryDisplay = screen.getPrimaryDisplay();
+  const height = 250;
+
   const window = new BrowserWindow({
-    height: 600,
-    width: 800,
+    x: 0,
+    y: primaryDisplay.workArea.height - height,
+    height: height,
+    width: primaryDisplay.size.width,
+    frame: false,
+    transparent: true,
+    roundedCorners: false,
+    resizable: false,
+    fullscreen: false,
+    alwaysOnTop: false,
+    icon: path.join(__dirname, "../assets/logo.png"),
+    title: 'Desktop Daemon',
     webPreferences: {
+      nodeIntegration:  true,
+      contextIsolation: false,
       preload: path.join(__dirname, "preload.js")
-    }
+    },
   });
 
   window.loadFile(path.join(__dirname, "../index.html"));
