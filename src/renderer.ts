@@ -13,22 +13,21 @@ canvas.height = screenHeight;
 
 function clearScreen() { ctx.clearRect(0, 0, screenWidth, screenHeight); }
 
-const file = new StaticSprite(ctx, './assets/files.png', [1, 0], 0.5);
 const sprite = new UnitController(ctx, {
 		spritesheetSrc: './assets/shadow_dog.png',
-		spriteAnimations: ['idle'],
+		spriteAnimations: [
+			{name: 'idle', y: 0, frames: 7},
+			{name: 'right', y: 3, frames: 9},
+			{name: 'left', y: 3, frames: 9, reverse: true},
+		],
 		spriteScale: 0.5,
 		spriteWidth: 575,
 		spriteHeight: 523,
-		spriteFrames: 7,
 	});
 
-(async () => {
-	sprite.vel = [20, 0];
-	while(true) {
+setInterval(() => {
+	requestAnimationFrame(() => {
 		clearScreen();
-		file.render(25, 25);
 		sprite.tick();
-		await sleep(1000 / FRAME_RATE);
-	}
-})();
+	})
+}, 1000 / FRAME_RATE);

@@ -16,7 +16,7 @@ function createWindow() {
     roundedCorners: false,
     resizable: false,
     fullscreen: false,
-    alwaysOnTop: false,
+    alwaysOnTop: true,
     icon: path.join(__dirname, "../assets/logo.png"),
     title: 'Desktop Daemon',
     webPreferences: {
@@ -27,7 +27,7 @@ function createWindow() {
   });
 
   window.loadFile(path.join(__dirname, "../index.html"));
-  window.webContents.openDevTools();
+  // window.webContents.openDevTools();
 }
 
 // Start
