@@ -1,0 +1,14 @@
+{
+	"width": 575,
+	"height": 523,
+	"animations": {
+		"idle": {
+			"y": 0,
+			"frames": 6
+		},
+		"walk": {
+			"y": 3,
+			"frames": 8
+		}
+	}
+}

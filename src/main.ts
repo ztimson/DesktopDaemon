@@ -1,5 +1,6 @@
-import {app, BrowserWindow, screen} from "electron";
-import * as path from "path";
+import {app, BrowserWindow, screen} from 'electron';
+import * as fs from 'fs';
+import * as path from 'path';
 
 // Window factory
 function createWindow() {

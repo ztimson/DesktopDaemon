@@ -1,0 +1,11 @@
+{
+	"width": 50,
+	"height": 50,
+	"animations": [
+		{
+			"name": "idle",
+			"y": 0,
+			"frames": 8
+		}
+	]
+}

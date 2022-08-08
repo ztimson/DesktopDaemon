@@ -1,7 +1,5 @@
 const {FRAME_RATE} = require('./dist/constants.js');
-const {UnitController} = require('./dist/unit-controller.js');
-const {StaticSprite} = require('./dist/sprites.js');
-const {sleep} = require('./dist/utils.js');
+const {NPC} = require('./dist/npc.js')
 
 const canvas = <HTMLCanvasElement>document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -13,21 +11,17 @@ canvas.height = screenHeight;
 
 function clearScreen() { ctx.clearRect(0, 0, screenWidth, screenHeight); }
 
-const sprite = new UnitController(ctx, {
-		spritesheetSrc: './assets/shadow_dog.png',
-		spriteAnimations: [
-			{name: 'idle', y: 0, frames: 7},
-			{name: 'right', y: 3, frames: 9},
-			{name: 'left', y: 3, frames: 9, reverse: true},
-		],
-		spriteScale: 0.5,
-		spriteWidth: 575,
-		spriteHeight: 523,
-	});
+const dog = new NPC(ctx, './assets/sprites/shadow-dog/spritesheet.png', '../assets/sprites/shadow-dog/spritesheet.json', {
+	bubbleOffset: [50, 75],
+	scale: 0.25
+});
 
+let frame = 0, once = true;
 setInterval(() => {
 	requestAnimationFrame(() => {
+		frame++;
 		clearScreen();
-		sprite.tick();
+
+		dog.tick();
 	})
 }, 1000 / FRAME_RATE);

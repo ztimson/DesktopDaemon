@@ -1,0 +1,58 @@
+{
+	"sprites": {
+		"generic": {
+			"x": 0,
+			"y": 0,
+			"width": 100,
+			"height": 100
+		},
+		"text": {
+			"x": 100,
+			"y": 0,
+			"width": 100,
+			"height": 100
+		},
+		"code": {
+			"x": 200,
+			"y": 0,
+			"width": 100,
+			"height": 100
+		},
+		"zip": {
+			"x": 300,
+			"y": 0,
+			"width": 100,
+			"height": 100
+		},
+		"image": {
+			"x": 400,
+			"y": 0,
+			"width": 100,
+			"height": 100
+		},
+		"audio": {
+			"x": 500,
+			"y": 0,
+			"width": 100,
+			"height": 100
+		},
+		"video": {
+			"x": 600,
+			"y": 0,
+			"width": 100,
+			"height": 100
+		},
+		"pdf": {
+			"x": 700,
+			"y": 0,
+			"width": 100,
+			"height": 100
+		},
+		"bubble": {
+			"x": 0,
+			"y": 100,
+			"width": 100,
+			"height": 100
+		}
+	}
+}
