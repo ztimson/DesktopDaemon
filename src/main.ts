@@ -1,5 +1,4 @@
 import {app, BrowserWindow, screen} from 'electron';
-import * as fs from 'fs';
 import * as path from 'path';
 
 // Window factory
@@ -28,7 +27,7 @@ function createWindow() {
   });
 
   window.loadFile(path.join(__dirname, "../index.html"));
-  // window.webContents.openDevTools();
+  window.webContents.openDevTools();
 }
 
 // Start

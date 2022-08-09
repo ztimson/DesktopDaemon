@@ -1,4 +1,4 @@
-const {GRAVITY} = require('./dist/constants.js');
+const {GRAVITY} = require('./constants.js');
 const {SpriteSheet} = require('./sprite-sheet');
 
 export type NPCOptions = {
