@@ -1,31 +1,28 @@
-/**
- * This file will automatically be loaded by webpack and run in the "renderer" context.
- * To learn more about the differences between the "main" and the "renderer" context in
- * Electron, visit:
- *
- * https://electronjs.org/docs/latest/tutorial/process-model
- *
- * By default, Node.js integration in this file is disabled. When enabling Node.js integration
- * in a renderer process, please be aware of potential security implications. You can read
- * more about security risks here:
- *
- * https://electronjs.org/docs/tutorial/security
- *
- * To enable Node.js integration in this file, open up `main.js` and enable the `nodeIntegration`
- * flag:
- *
- * ```
- *  // Create the browser window.
- *  mainWindow = new BrowserWindow({
- *    width: 800,
- *    height: 600,
- *    webPreferences: {
- *      nodeIntegration: true
- *    }
- *  });
- * ```
- */
-
 import './index.css';
+import {FRAME_RATE} from './constants';
+import {NPC} from './npc';
 
-console.log('👋 This message is being logged by "renderer.js", included via webpack');
+const canvas = <HTMLCanvasElement>document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const screenHeight = window.innerHeight;
+const screenWidth = window.innerWidth;
+
+canvas.width = screenWidth;
+canvas.height = screenHeight;
+
+function clearScreen() { ctx.clearRect(0, 0, screenWidth, screenHeight); }
+
+const dog = new NPC(ctx, '/static/sprites/shadow-dog/spritesheet.png', '/static/sprites/shadow-dog/spritesheet.json', {
+	bubbleOffset: [50, 75],
+	scale: 0.25
+});
+
+let frame = 0, once = true;
+setInterval(() => {
+	requestAnimationFrame(() => {
+		frame++;
+		clearScreen();
+
+		dog.tick();
+	})
+}, 1000 / FRAME_RATE);
