@@ -30,7 +30,7 @@
 
 ![Screenshot](./screenshot.gif)
 
-Desktop Daemon is an experimental game to learn sprites & create customziable pets which live on your desktop. They can largly be ignored as they play along your taskbar but need attention from time to time.
+Desktop Daemon is an experimental game I used to learn sprites. You can create customziable pets which live on your desktop. They can largly be ignored as they play along your taskbar but need attention from time to time.
 
 DD was writen completely froms scratch using TypeScript and Electron.
 
