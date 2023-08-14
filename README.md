@@ -9,7 +9,7 @@
   ### Desktop Daemon
   
   <!-- Description -->
-  Virtual Desktop Pet
+  Virtual Desktop Pets
 
   <!-- Repo badges -->
   [![Version](https://img.shields.io/badge/dynamic/json.svg?label=Version&style=for-the-badge&url=https://git.zakscode.com/api/v1/repos/ztimson/DesktopDaemon/tags&query=$[0].name)](https://git.zakscode.com/ztimson/DesktopDaemon/tags)
