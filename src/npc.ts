@@ -19,7 +19,7 @@ export class NPC {
 	private sprite!: any;
 	private text: string;
 
-	public pos = [0, 0];
+	public pos = [1000, 0];
 	public vel = [0, 0];
 
 	constructor(private readonly ctx: CanvasRenderingContext2D,
