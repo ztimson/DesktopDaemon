@@ -28,7 +28,7 @@
 
 ## About
 
-![Screenshot](./screenshot.gif)
+<img alt="Screenshot" src="./screenshot.gif" width="60%" height="auto">
 
 Desktop Daemon is an experimental game I used to learn sprites. You can create customziable pets which live on your desktop. They can largly be ignored as they play along your taskbar but need attention from time to time.
 
