@@ -11,11 +11,21 @@
   <!-- Description -->
   Virtual Desktop Pets
 
-  <!-- Repo badges -->
-  [![Version](https://img.shields.io/badge/dynamic/json.svg?label=Version&style=for-the-badge&url=https://git.zakscode.com/api/v1/repos/ztimson/DesktopDaemon/tags&query=$[0].name)](https://git.zakscode.com/ztimson/DesktopDaemon/tags)
-  [![Pull Requests](https://img.shields.io/badge/dynamic/json.svg?label=Pull%20Requests&style=for-the-badge&url=https://git.zakscode.com/api/v1/repos/ztimson/DesktopDaemon&query=open_pr_counter)](https://git.zakscode.com/ztimson/DesktopDaemon/pulls)
-  [![Issues](https://img.shields.io/badge/dynamic/json.svg?label=Issues&style=for-the-badge&url=https://git.zakscode.com/api/v1/repos/ztimson/DesktopDaemon&query=open_issues_count)](https://git.zakscode.com/ztimson/DesktopDaemon/issues)
+<!-- Repo badges -->
+  [![Version](https://img.shields.io/badge/dynamic/json.svg?label=Version&style=for-the-badge&url=https://git.zakscode.com/api/v1/repos/ztimson/desktop-daemon/tags&query=$[0].name)](https://git.zakscode.com/ztimson/desktop-daemon/tags)
+  [![Pull Requests](https://img.shields.io/badge/dynamic/json.svg?label=Pull%20Requests&style=for-the-badge&url=https://git.zakscode.com/api/v1/repos/ztimson/desktop-daemon&query=open_pr_counter)](https://git.zakscode.com/ztimson/desktop-daemon/pulls)
+  [![Issues](https://img.shields.io/badge/dynamic/json.svg?label=Issues&style=for-the-badge&url=https://git.zakscode.com/api/v1/repos/ztimson/desktop-daemon&query=open_issues_count)](https://git.zakscode.com/ztimson/desktop-daemon/issues)
 
+  <!-- Links -->
+
+  ---
+  <div>
+    <a href="https://git.zakscode.com/ztimson/desktop-daemon/releases" target="_blank">Release Notes</a>
+    • <a href="https://git.zakscode.com/ztimson/desktop-daemon/issues/new?template=.github%2fissue_template%2fbug.md" target="_blank">Report a Bug</a>
+    • <a href="https://git.zakscode.com/ztimson/desktop-daemon/issues/new?template=.github%2fissue_template%2fenhancement.md" target="_blank">Request a Feature</a>
+  </div>
+
+  ---
 </div>
 
 ## Table of Contents
