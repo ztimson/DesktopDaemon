@@ -1,0 +1,37 @@
+name: Build
+run-name: Build
+
+on:
+    push:
+
+jobs:
+    build:
+        name: Build NPM Project
+        runs-on: ubuntu-latest
+        container: node
+        steps:
+            - name: Clone Repository
+              uses: ztimson/actions/clone@develop
+
+            - name: Install Dependencies
+              run: npm i
+
+            - name: Build Project
+              run: npm run build
+
+    tag:
+        name: Tag Version
+        needs: build
+        runs-on: ubuntu-latest
+        container: node
+        steps:
+            - name: Clone Repository
+              uses: ztimson/actions/clone@develop
+
+            - name: Get Version Number
+              run: echo "VERSION=$(cat package.json | grep version | grep -Eo ':.+' | grep -Eo '[[:alnum:]\.\/\-]+')" >> $GITHUB_ENV
+
+            - name: Tag Version
+              uses: ztimson/actions/tag@develop
+              with:
+                  tag: ${{env.VERSION}}
